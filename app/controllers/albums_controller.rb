@@ -1,4 +1,5 @@
 class AlbumsController < ApplicationController
+  before_action :require_login
   before_action :set_album, only: [:show, :edit, :update, :destroy]
 
   # GET /albums
