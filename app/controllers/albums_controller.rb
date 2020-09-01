@@ -1,6 +1,5 @@
 class AlbumsController < ApplicationController
   before_action :require_login
-  before_action :signed_in?, only: [:edit, :update, :delete]
   before_action :set_album, only: [:show, :edit, :update, :destroy]
 
   # GET /albums
@@ -77,6 +76,6 @@ class AlbumsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def album_params
-      params.require(:album).permit(:user_id, :name, :description, images: [])
+      params.require(:album).permit(:user_id, :name, :description, :privacy, images: [])
     end
 end
