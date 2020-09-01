@@ -6,14 +6,17 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'style.css' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <header>
       <% if signed_in? %>
-        Signed in as: <%= current_user.email %>
-        <%= button_to 'Sign out', sign_out_path, method: :delete %>
+        <div class="signed_in">
+          Signed in as: <%= current_user.email %>
+          <%= button_to 'Sign out', sign_out_path, method: :delete %>
+        </div>
       <% else %>
         <%= link_to 'Sign in', sign_in_path %>
       <% end %>

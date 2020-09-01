@@ -1,31 +1,25 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Albums</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @albums.each do |album| %>
-      <tr>
-        <td><%= album.name %></td>
-        <td><%= album.description %></td>
-        <td><%= link_to image_tag(album.resize_image(0), style: "width:100px;height:100px;"), album %></td>
-        <% if current_user.id == album.user_id %>
-          <td><%= link_to 'Edit', edit_album_path(album) %></td>
-          <td><%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<%= link_to 'New Album', new_album_path %>
 <br>
 
-<%= link_to 'New Album', new_album_path %>
+<div class="album_co">
+  <% @albums.each do |album| %>
+      <div class="albums">
+        <p><%= link_to image_tag(album.resize_image(0), :class => "image_index"), album %></p>
+        <div class="album_details">
+          <p><%= album.name %></p>
+          <p>Description: <%= album.description %></p>
+          <% if current_user.id == album.user_id %>
+            <div class="index_actions">
+              <p><%= link_to 'Edit', edit_album_path(album) %></p>
+              <p><%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+</div>
+
+
