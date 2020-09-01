@@ -16,7 +16,7 @@
       <tr>
         <td><%= album.name %></td>
         <td><%= album.description %></td>
-        <td><%= link_to 'Show', album %></td>
+        <td><%= link_to image_tag(album.resize_image(0), style: "width:100px;height:100px;"), album %></td>
         <% if current_user.id == album.user_id %>
           <td><%= link_to 'Edit', edit_album_path(album) %></td>
           <td><%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } %></td>
