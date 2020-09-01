@@ -17,7 +17,7 @@
 
 <% if @album.images.attached? %>
     <% @album.images.each_with_index do |image, index| %>
-        <%= image_tag(@album.resize_image(index), style: 'width:25%; height: auto;')%>
+        <%= image_tag(@album.resize_image(index), class: "album_show_image")%>
     <% end %>
 <% end %>
 
