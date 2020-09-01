@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
 
 body {
-    background-color: #c5e7e5;
+    background-color: #8caeaf;
     font-family: 'Inter', sans-serif;
 }
 
@@ -16,14 +16,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 20px;
     margin-top: 20px;
-    margin-bottom: 30px;
-  
-    border-radius: 63px;
+    margin-bottom: 40px;
     width: 400px;
-    height: 180px;
-    background: linear-gradient(145deg, #d3f7f5, #b1d0ce);
-    box-shadow:  20px 20px 33px #a5c2c0, -20px -20px 33px #e5ffff;
+    height: 170px;
+    border-radius: 37px;
+    background: #8caeaf;
+    box-shadow:  8px 8px 21px #667f80, 
+                 -8px -8px 21px #b2ddde;
 }
 
 .album_details {
@@ -43,9 +44,10 @@ body {
     width: 25%; 
     height: auto;
     margin: 30px;
-    border-radius: 40px;
-    background: linear-gradient(145deg, #d3f7f5, #b1d0ce);
-    box-shadow:  20px 20px 33px #a5c2c0, -20px -20px 33px #e5ffff;
+    border-radius: 37px;
+    background: #8caeaf;
+    box-shadow:  8px 8px 21px #667f80, 
+             -8px -8px 21px #b2ddde;
 }
 
 a:hover {
