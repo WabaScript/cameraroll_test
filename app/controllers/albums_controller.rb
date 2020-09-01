@@ -1,5 +1,6 @@
 class AlbumsController < ApplicationController
   before_action :require_login
+  before_action :signed_in?, only: [:edit, :update, :delete]
   before_action :set_album, only: [:show, :edit, :update, :destroy]
 
   # GET /albums
@@ -19,7 +20,13 @@ class AlbumsController < ApplicationController
   end
 
   # GET /albums/1/edit
-  def edit
+  def edit 
+    # @user = User.find(params[:id])
+    if current_user.id != @album.user_id 
+      redirect_to albums_url
+    else
+      render :edit
+    end
   end
 
   # POST /albums
