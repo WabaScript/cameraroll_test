@@ -19,7 +19,6 @@ a:hover {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
 }
 
 .head_con a {
@@ -87,8 +86,9 @@ a:hover {
 }
 
 
-.albums_con {
-
+.album_con {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .album {
@@ -162,4 +162,40 @@ a:hover {
 		-ms-transform:     translateY(-15px);
 		transform:         translateY(-15px)
 	}
+}
+
+.floating_action_btn {
+    width: 70px;
+    height: 70px;
+    /* background-color: #8c9eff; */
+    border-radius: 50%;
+    background: linear-gradient(145deg, #96babb, #7e9d9e);
+    box-shadow:  8px 8px 21px #667f80, 
+                 -8px -8px 21px #b2ddde;
+    transition: all 0.4s ease-in-out;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+}
+
+.floating_action_btn:hover {
+    box-shadow: 0 6px 14px 0 #666;
+    transform: scale(1.05); 
+    background-color: white;
+    color: white;
+}
+
+.floating_action_btn a {
+    text-decoration: none;
+}
+
+.floating_action_btn a:hover {
+    text-decoration: none;
+    color: whitesmoke;
+    transition: all 0.4s ease-in-out;
+    font-weight: bolder;
 }
