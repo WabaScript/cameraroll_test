@@ -14,21 +14,25 @@
     <header>
       <% if signed_in? %>
         <div class="signed_in">
-          Signed in as: <%= current_user.email %>
+          Signed in as: <%= link_to current_user.email, current_user%>
           <%= button_to 'Sign out', sign_out_path, method: :delete %>
         </div>
       <% else %>
-        <%= link_to 'Sign in', sign_in_path %>
-      <% end %>
+        <%= link_to 'CameraRoll 📸', sign_in_path %>
+      
     </header>
-    
-    <section>
-      <div id="flash">
-        <% flash.each do |key, value| %>
-          <div class="flash <%= key %>"><%= value %></div>
+
+    <div class="login_container">
+      <section class="login_path">
+        <div id="flash">
+          <% flash.each do |key, value| %>
+            <div class="flash <%= key %>"><%= value %></div>
+          <% end %>
+        </div>
         <% end %>
-      </div>
-      <%= yield %>
-    </section>
+        <%= yield %>
+      </section>
+    </div>
+   
   </body>
 </html>

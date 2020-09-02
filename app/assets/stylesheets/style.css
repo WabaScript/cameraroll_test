@@ -12,6 +12,27 @@ body {
     margin: 20px;
 }
 
+.login_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.login_path {
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-content: space-around;
+    padding: 20px;
+    height: 350px;
+    width: 350px;
+    border-radius: 21px;
+    background: #8caeaf;
+    box-shadow:  9px 9px 21px #384646, 
+             -9px -9px 21px #e0ffff;
+}
+
 a:hover {
     font-weight: bold;
 }

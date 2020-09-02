@@ -1,4 +1,5 @@
 class UsersController < Clearance::UsersController
+  before_action :require_login
   before_action :find_user, only: [:show, :edit, :update, :destroy]
 
     # GET /users/1
