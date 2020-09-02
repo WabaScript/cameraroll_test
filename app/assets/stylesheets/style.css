@@ -157,11 +157,6 @@ a:hover {
 		-ms-transform:     translateY(-30px);
 		transform:         translateY(-30px)
 	}
-	60% {
-		-webkit-transform: translateY(-15px);
-		-ms-transform:     translateY(-15px);
-		transform:         translateY(-15px)
-	}
 }
 
 .floating_action_btn {
