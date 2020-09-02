@@ -6,21 +6,74 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-.signed_in {
+a {
+    color:black
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+.head_con {
+    position: relative;
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    margin: 20px;
+    align-items: center;
+}
+
+.head_con a {
+    text-decoration: none;
+    color:black;
+}
+
+.logo_con {
+    flex: 1;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 300px;
+    max-width: 100%;
+    border-radius: 132px;
+    background: linear-gradient(145deg, #96babb, #7e9d9e);
+    box-shadow:  5px 5px 10px #384646, 
+             -5px -5px 10px #e0ffff;
+    -webkit-animation-duration: 1.2s;
+    animation-duration: 1.2s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+.logo_con:hover {
+    animation-name: bounce;
+    -moz-animation-name: bounce;
+}
+
+.signed_in {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-top: 25px;;
 }
 
 .login_container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .login_path {
     display: flex;
+    flex-direction: column;
     justify-self: center;
     justify-content: center;
     align-content: space-around;
@@ -33,9 +86,6 @@ body {
              -9px -9px 21px #e0ffff;
 }
 
-a:hover {
-    font-weight: bold;
-}
 
 .albums_con {
 
@@ -94,4 +144,22 @@ a:hover {
     background: #8caeaf;
     box-shadow:  8px 8px 21px #667f80, 
                 -8px -8px 21px #b2ddde;
+}
+
+@keyframes bounce {
+	0%, 100%, 20%, 50%, 80% {
+		-webkit-transform: translateY(0);
+		-ms-transform:     translateY(0);
+		transform:         translateY(0)
+	}
+	40% {
+		-webkit-transform: translateY(-30px);
+		-ms-transform:     translateY(-30px);
+		transform:         translateY(-30px)
+	}
+	60% {
+		-webkit-transform: translateY(-15px);
+		-ms-transform:     translateY(-15px);
+		transform:         translateY(-15px)
+	}
 }

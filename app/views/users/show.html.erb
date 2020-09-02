@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<div class="login_container">
+<div class="login_path">
 <p>
   <strong>Name:</strong>
   <%= @user.email %>
@@ -11,6 +13,8 @@
 </p>
 
 <% if current_user.id == @user.id %>
-    <%= link_to 'Edit', edit_user_path(@user) %> |
+    <%= link_to 'Edit', edit_user_path(@user) %>
 <% end %>
 <%= link_to 'Back', albums_path %>
+</div>
+</div>
