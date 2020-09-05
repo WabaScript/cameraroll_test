@@ -8,7 +8,9 @@
       <%= @user.email %>
     </p>
     <p>
-      <%# <%= image_tag(@user.image) %> %>
+      <strong>Followers:</strong>
+      <%= @user.followers.length %>
+      <%# @user.follow %>
     </p>
   </div>
 

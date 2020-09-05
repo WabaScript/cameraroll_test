@@ -12,4 +12,8 @@ class User < ApplicationRecord
   has_many :followees, through: :followed_users
   
   validates :email, presence: true, uniqueness: true
+
+  def gain_follower(current_user)
+    self.followers.push(current_user)
+  end
 end

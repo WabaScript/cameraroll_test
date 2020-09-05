@@ -7,6 +7,8 @@ class UsersController < Clearance::UsersController
     # GET /users/1.json
     def show
       @albums = @user.albums
+      @followers = @user.followers
+      @followees = @user.followees
     end
 
     # GET /users/new
