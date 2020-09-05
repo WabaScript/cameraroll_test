@@ -4,7 +4,9 @@ class User < ApplicationRecord
   has_one_attached :image
 
   # users can have followers
+  # Join table ref
   has_many :following_users, foreign_key: :followee_id, class_name: 'Relationship'  
+  # User table ref
   has_many :followers, through: :following_users
 
   # users can follow who they want

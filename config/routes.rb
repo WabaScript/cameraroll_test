@@ -17,5 +17,7 @@ Rails.application.routes.draw do
   # follow/unfollow actions
   post '/users/:id/follow', to: "users#follow", as: "follow_user"
   post '/users/:id/unfollow', to: "users#unfollow", as: "unfollow_user"
+
+  put '/albums/:id/earn_coin_for_view', to: "albums#earn_coin_for_view", as: "earn_coin_for_view"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

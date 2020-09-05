@@ -28,7 +28,10 @@
   </p>
 
   <% if current_user.id == @user.id %>
-      <%= link_to 'Edit', edit_user_path(@user) %>
+      <strong>Coins:<strong>
+      <%= current_user.coins%>
+      <br>
+      <strong><%= link_to 'Edit', edit_user_path(@user) %><strong>
   <% end %>
   <%= link_to 'Back', albums_path %>
   </div>

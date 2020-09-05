@@ -1,6 +1,6 @@
 class AlbumsController < ApplicationController
   before_action :require_login
-  before_action :set_album, only: [:show, :edit, :update, :destroy]
+  before_action :set_album, only: [:show, :edit, :update, :destroy, :earn_coin_for_view]
 
   # GET /albums
   # GET /albums.json
@@ -67,6 +67,14 @@ class AlbumsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def earn_coin_for_view()
+    @index = params[:index].to_i
+    if current_user.id != @album.user.id
+      @album.user.increment! :coins
+    end
+    redirect_to @album.images[@index]
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -78,4 +86,6 @@ class AlbumsController < ApplicationController
     def album_params
       params.require(:album).permit(:user_id, :name, :description, :privacy, images: [])
     end
+
+
 end
