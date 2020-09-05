@@ -10,7 +10,15 @@
     <p>
       <strong>Followers:</strong>
       <%= @user.followers.length %>
-      <%# @user.follow %>
+       <strong>Following:</strong>
+      <%= @user.followees.length %>
+      <% if current_user != @user %>
+        <% if current_user.followees.include?(@user) %>   
+          <h5><%= button_to "UnFollow #{@user.name}", unfollow_user_path, method: "POST" %></h5>
+        <% else %>   
+          <h5><%= button_to "Follow #{@user.name}", follow_user_path, method: "POST"  %></h5>
+        <% end %>
+      <% end %>
     </p>
   </div>
 

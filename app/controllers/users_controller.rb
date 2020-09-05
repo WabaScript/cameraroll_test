@@ -61,6 +61,20 @@ class UsersController < Clearance::UsersController
         format.json { head :no_content }
         end
     end
+
+    # POST /users/1/follow
+    def follow
+      @user = User.find(params[:id])
+      current_user.followees << @user
+      redirect_to user_path(@user)
+    end  
+    
+    # POST /users/1/unfollow 
+    def unfollow
+      @user = User.find(params[:id])
+      current_user.followed_users.find_by(followee_id: @user.id).destroy
+      redirect_to user_path(@user)
+    end
     
     private
     def redirect_signed_in_users
