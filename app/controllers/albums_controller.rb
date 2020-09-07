@@ -68,6 +68,7 @@ class AlbumsController < ApplicationController
     end
   end
   
+  # Testing other methods
   def earn_coin_for_view()
     @index = params[:index].to_i
     if current_user.id != @album.user.id
@@ -86,6 +87,5 @@ class AlbumsController < ApplicationController
     def album_params
       params.require(:album).permit(:user_id, :name, :description, :privacy, images: [])
     end
-
 
 end
