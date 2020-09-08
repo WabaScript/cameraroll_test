@@ -12,7 +12,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @album.user.email %>
+  <%= link_to @album.user.email, @album.user %>
 </p>
 
 <% if @album.images.attached? %>
