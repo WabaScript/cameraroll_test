@@ -70,6 +70,17 @@ a:hover {
     margin-top: 50px;
 }
 
+/* @media (min-width: 954px) {
+    .login_container {
+        padding: 50px;
+        height: 850px;
+        width: 850px;
+    }
+    .login_path {
+        padding: 20px;
+    }
+} */
+
 .login_path {
     display: flex;
     flex-direction: column;
