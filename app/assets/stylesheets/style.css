@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
 
 body {
-    background-color: #69b9ff;
+    background-color: #32a3ff;
     font-family: 'Inter', sans-serif;
 }
 
@@ -36,7 +36,7 @@ a:hover {
     width: 300px;
     max-width: 100%;
     border-radius: 132px;
-    background: linear-gradient(145deg, #b4e5f5, #32a3ff);
+    background: linear-gradient(145deg, #b4e5f5, #69b9ff);
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 
         0 1px 2px rgba(0,0,0,0.24);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
@@ -51,7 +51,8 @@ a:hover {
 .logo_con:hover {
     animation-name: bounce;
     -moz-animation-name: bounce;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+        0 10px 10px rgba(0,0,0,0.22);
 }
 
 .signed_in {
@@ -93,9 +94,9 @@ a:hover {
     height: 350px;
     width: 350px;
     border-radius: 21px;
-    background: #b4e5f5;
-    box-shadow:  9px 9px 21px #384646, 
-             -9px -9px 21px #e0ffff;
+    background: #69b9ff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 
+        0 1px 2px rgba(0,0,0,0.24);
 }
 
 .album_con {
@@ -113,7 +114,7 @@ a:hover {
     width: 500px;
     height: 200px;
     border-radius: 37px;
-    background: #b4e5f5;
+    background: #69b9ff;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 
         0 1px 2px rgba(0,0,0,0.24);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
@@ -128,15 +129,15 @@ a:hover {
     width: 135px;
     height: 135px;
     border-radius: 30px;
-    background: #8caeaf;
-    box-shadow: inset -5px -5px 9px #455556, 
-    inset 5px 5px 9px #d3ffff;
+    background: #69b9ff;
+    box-shadow: inset -5px -5px 9px #353741, 
+        inset 5px 5px 9px #d3ffff;
 }
 
 .image_index:hover {
     opacity: 85%;
-    width: 155px;
-    height: 155px;
+    width: 145px;
+    height: 145px;
 }
 
 .album_details {
@@ -160,8 +161,9 @@ a:hover {
     margin: 30px;
     border-radius: 37px;
     background: #8caeaf;
-    box-shadow:  8px 8px 21px #667f80, 
-                -8px -8px 21px #b2ddde;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 
+        0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
 @keyframes bounce {
@@ -182,9 +184,9 @@ a:hover {
     height: 70px;
     /* background-color: #8c9eff; */
     border-radius: 50%;
-    background: linear-gradient(145deg, #96babb, #7e9d9e);
-    box-shadow:  8px 8px 21px #667f80, 
-                 -8px -8px 21px #b2ddde;
+    background: linear-gradient(145deg, #7bbffc, #69b9ff);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 
+        0 1px 2px rgba(0,0,0,0.24);
     transition: all 0.4s ease-in-out;
     font-size: 40px;
     color: white;
