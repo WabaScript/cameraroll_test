@@ -1,6 +1,9 @@
-<h1>Editing Album</h1>
+<div class="login_container">
+    <div class="login_path">
+    <h1>Edit Album: <%=@album.name %></h1>
+    <%= render 'form', album: @album %>
 
-<%= render 'form', album: @album %>
-
-<%= link_to 'Show', @album %> |
-<%= link_to 'Back', albums_path %>
+    <%= link_to 'Show', @album %> 
+    <%= link_to 'Back', albums_path %>
+    </div>
+</div>
