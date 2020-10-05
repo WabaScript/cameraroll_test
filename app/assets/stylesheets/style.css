@@ -198,7 +198,7 @@ a:hover {
 }
 
 .floating_action_btn:hover {
-    box-shadow: 0 6px 14px 0 #666;
+    box-shadow: 0 6px 14px 0 rgb(5, 5, 5);
     transform: scale(1.05); 
     background-color: white;
     color: white;
