@@ -11,8 +11,9 @@
   </head>
 
   <body>
+  <div class="container">
     <header>
-    <div class="head_con">
+    <div class="row head_con">
       <%= link_to albums_path do %>
         <div class="logo_con">
           <h1>CameraRoll 📸</h1>
@@ -27,6 +28,7 @@
       <% else %>
     </header>
 
+  <div class="container">
     <div class="login_container">
       <section class="login_path">
         <div id="flash">
@@ -38,6 +40,7 @@
         <%= yield %>
       </section>
     </div>
+  </div>
 
     <footer>
       <section>
